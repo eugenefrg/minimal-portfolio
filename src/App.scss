@@ -41,6 +41,10 @@ p, div {
   @media (max-width: $breakpoint-tablet) {
     display: block;
   }
+  background-size: 60rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
 }
 .sider {
   position:fixed;
@@ -80,6 +84,8 @@ p, div {
     justify-content: flex-end;
     align-items: center;
     height:100vh;
+    padding:4rem;
+    box-sizing: border-box;
     @media (max-width: $breakpoint-tablet) {
       display:none;
     }
@@ -87,9 +93,9 @@ p, div {
 }
 .listBox {
   $pad:4rem;
-  padding-left:$pad;
-  padding-right:$pad;
+  padding:$pad;
   min-height:100vh;
+  box-sizing: border-box;
 }
 .projectItem {
   $pad:2rem;

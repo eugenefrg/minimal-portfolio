@@ -5,10 +5,10 @@ import {ReactComponent as LinkedIn} from "./assets/images/icons/linkedIn.svg"
 import {ReactComponent as GitHub} from "./assets/images/icons/github.svg"
 import {ReactComponent as AtSign} from "./assets/images/icons/at-sign.svg"
 import {ReactComponent as CatFull} from "./assets/images/siteDesign/catFull.svg"
-import {ReactComponent as CatWire} from "./assets/images/siteDesign/catWire.svg"
+import CatWire from "./assets/images/siteDesign/catWire-pass-thru-40.svg"
 function App() {
   return (
-    <div className="main">
+    <div className="main" style={{backgroundImage:`url("${CatWire}")`}}>
       <div className="sider">
         <div className="description">
           <div>
@@ -28,13 +28,12 @@ function App() {
       <div className="filler"/>
       <div className="projects">
         <div className="catHolder">
-          <CatWire/>
         </div>
         <div className="listBox">
           <h2>My Projects</h2>
           {data.projects.map(project=>{
             return (<div className="projectItem">
-              <img src={project.imageUrl} alt={project.name} width="384px" height="216px"/>
+              <img src={project.imageUrl} alt={project.name} />
               <div>
                 <h3><a href={project.demoUrl} target="_blank" rel="noreferrer">{project.name}</a></h3>
                 <p>{project.description}</p>
