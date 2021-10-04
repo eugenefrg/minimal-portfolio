@@ -1,8 +1,5 @@
 $breakpoint-tablet: 768px;
 $breakpoint-sm-laptop: 1024px;
-html {
-  font-family: 'Montserrat', sans-serif !important;
-}
 h1 {
   font-weight: 600;
   font-size: 4rem;
@@ -27,6 +24,9 @@ p, div {
 .link-icons {
   display:flex;
   justify-content: flex-end;
+  @media (max-width: $breakpoint-tablet) {
+    justify-content: center;
+  }
   & svg {
     padding-left: .5rem;
     @media (max-width: $breakpoint-tablet) {
@@ -60,8 +60,9 @@ p, div {
     width:32rem;
     padding-right:8rem;
     @media (max-width: $breakpoint-tablet) {
-      white-space: wrap;
-      padding:4rem;
+      white-space: wrap;  
+      box-sizing: border-box;
+      padding:.5rem;
     }
   }
 }
