@@ -1,0 +1,75 @@
+$breakpoint-tablet: 768px;
+
+html {
+  font-family: 'Montserrat', sans-serif !important;
+}
+h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  margin: 0px;  
+}
+h2 {
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+}
+p, div {
+  color: #474747;
+  white-space: pre-line;
+}
+.font-bold {
+  font-weight:600;
+  font-size:18px;
+  color: #000 !important;
+}
+.link-icons {
+  display:flex;
+  justify-content: flex-end;
+  & svg {
+    padding-left: .5rem;
+  }
+}
+.main {
+  display: flex;
+}
+.sider {
+  position:fixed;
+  width:50%;
+}
+.description {
+  height: 100vh;
+  text-align:right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  & > div {
+    width:32rem;
+    padding-right:8rem;
+  }
+}
+.filler {
+  width:50%;
+}
+.projects {
+  width:50%;
+  overflow-y:auto;
+  & .catHolder {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:100vh;
+  }
+}
+.listBox {
+  $pad:4rem;
+  padding-left:$pad;
+  padding-right:$pad;
+}
+.projectItem {
+  $pad:2rem;
+  padding-top:$pad;
+  padding-bottom:$pad;
+  & img {
+    width: 100%;
+  }
+}
