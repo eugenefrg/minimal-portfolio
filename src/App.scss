@@ -1,5 +1,5 @@
 $breakpoint-tablet: 768px;
-
+$breakpoint-sm-laptop: 1024px;
 html {
   font-family: 'Montserrat', sans-serif !important;
 }
@@ -15,7 +15,9 @@ h2 {
 }
 p, div {
   color: #474747;
-  white-space: pre-line;
+  @media (max-width: $breakpoint-tablet) {
+    white-space: wrap;
+  }
 }
 .font-bold {
   font-weight:600;
@@ -27,14 +29,26 @@ p, div {
   justify-content: flex-end;
   & svg {
     padding-left: .5rem;
+    @media (max-width: $breakpoint-tablet) {
+      height:4rem;
+      width:4rem;
+      padding-left: 1rem;
+    }
   }
 }
 .main {
   display: flex;
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
 }
 .sider {
   position:fixed;
   width:50%;
+  @media (max-width: $breakpoint-tablet) {
+    position:static;
+    width:100%;
+  }
 }
 .description {
   height: 100vh;
@@ -45,6 +59,10 @@ p, div {
   & > div {
     width:32rem;
     padding-right:8rem;
+    @media (max-width: $breakpoint-tablet) {
+      white-space: wrap;
+      padding:4rem;
+    }
   }
 }
 .filler {
@@ -53,11 +71,17 @@ p, div {
 .projects {
   width:50%;
   overflow-y:auto;
+  @media (max-width: $breakpoint-tablet) {
+    width:100%;
+  }
   & .catHolder {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height:100vh;
+    @media (max-width: $breakpoint-tablet) {
+      display:none;
+    }
   }
 }
 .listBox {
@@ -71,12 +95,23 @@ p, div {
   padding-top:$pad;
   padding-bottom:$pad;
   display:flex;
+  @media (max-width: $breakpoint-sm-laptop) {
+      flex-direction: column;
+  }
+  & img {
+    width:384px;
+    height:216px;
+    @media (max-width: $breakpoint-sm-laptop) {
+      width:auto;
+      height:auto;
+    }
+  }
   & div {
     padding-left: .5rem;
     & h3 {
       &  > a { 
         font-size: 24px;
-      }
+      } 
       margin:0;
     }
     & a {
