@@ -34,10 +34,12 @@ function App() {
           <h2>My Projects</h2>
           {data.projects.map(project=>{
             return (<div className="projectItem">
+              <img src={project.imageUrl} alt={project.name} width="384px" height="216px"/>
+              <div>
                 <h3><a href={project.demoUrl} target="_blank" rel="noreferrer">{project.name}</a></h3>
-                <img src={project.imageUrl} alt={project.name}/>
                 <p>{project.description}</p>
                 {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">View Code</a>}
+                </div>
               </div>)
           })}
         </div>

@@ -64,12 +64,23 @@ p, div {
   $pad:4rem;
   padding-left:$pad;
   padding-right:$pad;
+  min-height:100vh;
 }
 .projectItem {
   $pad:2rem;
   padding-top:$pad;
   padding-bottom:$pad;
-  & img {
-    width: 100%;
+  display:flex;
+  & div {
+    padding-left: .5rem;
+    & h3 {
+      &  > a { 
+        font-size: 24px;
+      }
+      margin:0;
+    }
+    & a {
+      font-size: 18px;
+    }
   }
 }
