@@ -3,123 +3,125 @@ $breakpoint-sm-laptop: 1024px;
 h1 {
   font-weight: 600;
   font-size: 4rem;
-  margin: 0px;  
+  margin: 0px;
 }
 h2 {
   font-weight: 400;
   font-size: 4rem;
   text-align: center;
 }
-p, div {
+p,
+div {
   color: #474747;
   @media (max-width: $breakpoint-tablet) {
     white-space: wrap;
   }
 }
 .font-bold {
-  font-weight:600;
-  font-size:18px;
+  font-weight: 600;
+  font-size: 18px;
   color: #000 !important;
 }
 .link-icons {
-  display:flex;
+  display: flex;
   justify-content: flex-end;
   @media (max-width: $breakpoint-tablet) {
     justify-content: center;
   }
   & svg {
-    padding-left: .5rem;
+    padding-left: 0.5rem;
     @media (max-width: $breakpoint-tablet) {
-      height:4rem;
-      width:4rem;
+      height: 4rem;
+      width: 4rem;
       padding-left: 1rem;
     }
   }
 }
 .main {
   display: flex;
-  @media (max-width: $breakpoint-tablet) {
-    display: block;
-  }
   background-size: 60rem;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: right;
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+    background-size: contain;
+  }
 }
 .sider {
-  position:fixed;
-  width:50%;
+  position: fixed;
+  width: 50%;
   @media (max-width: $breakpoint-tablet) {
-    position:static;
-    width:100%;
+    position: static;
+    width: 100%;
   }
 }
 .description {
   height: 100vh;
-  text-align:right;
+  text-align: right;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   & > div {
-    width:32rem;
-    padding-right:8rem;
+    width: 32rem;
+    padding-right: 8rem;
     @media (max-width: $breakpoint-tablet) {
-      white-space: wrap;  
+      white-space: wrap;
       box-sizing: border-box;
-      padding:.5rem;
+      padding: 0.5rem;
     }
   }
 }
 .filler {
-  width:50%;
+  width: 50%;
 }
 .projects {
-  width:50%;
-  overflow-y:auto;
+  width: 50%;
+  overflow-y: auto;
   @media (max-width: $breakpoint-tablet) {
-    width:100%;
+    width: 100%;
   }
   & .catHolder {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height:100vh;
-    padding:4rem;
+    height: 100vh;
+    padding: 4rem;
     box-sizing: border-box;
     @media (max-width: $breakpoint-tablet) {
-      display:none;
+      display: none;
     }
   }
 }
 .listBox {
-  $pad:4rem;
-  padding:$pad;
-  min-height:100vh;
+  $pad: 4rem;
+  padding: $pad;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 .projectItem {
-  $pad:2rem;
-  padding-top:$pad;
-  padding-bottom:$pad;
-  display:flex;
+  $pad: 2rem;
+  padding-top: $pad;
+  padding-bottom: $pad;
+  display: flex;
   @media (max-width: $breakpoint-sm-laptop) {
-      flex-direction: column;
+    flex-direction: column;
   }
   & img {
-    width:384px;
-    height:216px;
+    width: 384px;
+    height: 216px;
     @media (max-width: $breakpoint-sm-laptop) {
-      width:auto;
-      height:auto;
+      width: auto;
+      height: auto;
     }
   }
   & div {
-    padding-left: .5rem;
+    padding-left: 0.5rem;
     & h3 {
-      &  > a { 
+      & > a {
         font-size: 24px;
-      } 
-      margin:0;
+      }
+      margin: 0;
     }
     & a {
       font-size: 18px;
