@@ -1,14 +1,14 @@
 $breakpoint-tablet: 768px;
 $breakpoint-sm-laptop: 1024px;
+
+#root {
+  height: 100vh;
+}
+
 h1 {
   font-weight: 600;
   font-size: 4rem;
   margin: 0px;
-}
-h2 {
-  font-weight: 400;
-  font-size: 4rem;
-  text-align: center;
 }
 p,
 div {
@@ -36,6 +36,10 @@ div {
       padding-left: 1rem;
     }
   }
+}
+.ant-card {
+  border-radius: 15px !important;
+  background-color: #ffffff94 !important;
 }
 .main {
   display: flex;

@@ -1,79 +1,56 @@
+import { Col, Layout, Row, Space } from "antd";
+import "antd/dist/antd.css";
 import "./App.scss";
 import data from "./assets/data";
-import { ReactComponent as Twitter } from "./assets/images/icons/twitter.svg";
-import { ReactComponent as LinkedIn } from "./assets/images/icons/linkedIn.svg";
-import { ReactComponent as GitHub } from "./assets/images/icons/github.svg";
-import { ReactComponent as AtSign } from "./assets/images/icons/at-sign.svg";
-import { ReactComponent as CatFull } from "./assets/images/siteDesign/catFull.svg";
 import CatWire from "./assets/images/siteDesign/catWire-pass-thru-40.svg";
+import { CertificationList } from "./components/CertificationList";
+import { EducationList } from "./components/EducationList";
+import { Hero } from "./components/Hero";
+import { ProjectsList } from "./components/ProjectsList";
+import { SkillList } from "./components/SkillList";
+
 function App() {
   return (
-    <div className="main" style={{ backgroundImage: `url("${CatWire}")` }}>
-      <div className="sider">
-        <div className="description">
-          <div>
-            <CatFull />
-            <h1>{data.name}</h1>
-            <p>{data.description}</p>
-            <p className="font-bold">Follow me on:</p>
-            <div className="link-icons">
-              <a href={data.links.linkedin} target="_blank" rel="noreferrer">
-                <LinkedIn />
-              </a>
-              <a href={data.links.twitter} target="_blank" rel="noreferrer">
-                <Twitter />
-              </a>
-              <a href={data.links.github} target="_blank" rel="noreferrer">
-                <GitHub />
-              </a>
-              <a href={data.links.gmail} target="_blank" rel="noreferrer">
-                <AtSign />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="filler" />
-      <div className="projects">
-        <div className="catHolder"></div>
-        <div className="listBox">
-          <h2>My Projects</h2>
-          {data.projects.map((project) => {
-            return (
-              <div className="projectItem">
-                <img src={project.imageUrl} alt={project.name} />
-                <div>
-                  <h3>
-                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                      {project.name}
-                    </a>
-                  </h3>
-                  <p>{project.description}</p>
-                  {project.repoUrl && (
-                    <a href={project.repoUrl} target="_blank" rel="noreferrer">
-                      View Code
-                    </a>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="listBox">
-          <h2>Certifications</h2>
-          {data.certifications.freeCodeCamp.map((certificate) => {
-            return (
-              <div className="certificateItem">
-                <h2>
-                  FreeCodeCamp :{" "}
-                  <a href={certificate.url}>{certificate.name}</a>
-                </h2>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+    <Layout style={{ height: "100%" }}>
+      <Layout.Content>
+        <Row style={{ height: "100%" }}>
+          <Col span={12} style={{ height: "100%" }}>
+            <Hero
+              name={data.name}
+              description={data.description}
+              links={data.links}
+            />
+          </Col>
+          <Col
+            span={12}
+            style={{
+              height: "100vh",
+              overflow: "auto",
+              backgroundImage: `url("${CatWire}")`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              paddingBottom: "2rem",
+            }}
+          >
+            <Space direction="vertical" size="large">
+              <Row style={{ height: "100vh" }} />
+              <Row>
+                <ProjectsList projects={data.projects} />
+              </Row>
+              <Row>
+                <EducationList educations={data.educations} />
+              </Row>
+              <Row>
+                <SkillList skills={data.skills} />
+              </Row>
+              <Row>
+                <CertificationList certifications={data.certifications} />
+              </Row>
+            </Space>
+          </Col>
+        </Row>
+      </Layout.Content>
+    </Layout>
   );
 }
 

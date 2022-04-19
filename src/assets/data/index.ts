@@ -1,17 +1,25 @@
-import { Person } from "./types";
+import { Person, SkillLevel } from "./types";
 import sunsetHillsGif from "../images/projects/sunsetHills.gif";
 import wpWebsiteAttempt from "../images/projects/wpWebsiteAttempt.png";
 
+/**
+ * An object that contains all the data for the website.
+ * This is used to populate the website with data.
+ * @type {Person}
+ */
 const data: Person = {
   name: "Eugene Francis R.",
   description:
     "A Full Stack Developer / Software Engineer and Enigmatologist.\nI break complex obstacles to simple and less daunting forms and figure it out from there.",
-  links: {
-    github: "https://github.com/eugenefrg",
-    linkedin: "https://www.linkedin.com/in/eugene-francis-rebong-b1374a13b/",
-    gmail: "mailto:eugene999.dev@gmail.com",
-    twitter: "https://twitter.com/eugenefrancis_r",
-  },
+  links: [
+    { name: "github", url: "https://github.com/eugenefrg" },
+    {
+      name: "linkedIn",
+      url: "https://www.linkedin.com/in/eugene-francis-rebong-b1374a13b/",
+    },
+    { name: "email", url: "mailto:eugene999.dev@gmail.com" },
+    { name: "twitter", url: "https://twitter.com/eugenefrancis_r" },
+  ],
   projects: [
     {
       name: "FreeCodeCamp Responsive Web Design",
@@ -37,14 +45,197 @@ const data: Person = {
         "An attempt at making my personal website. Trying out wordpress to see how easy it is compared to anything that I have done. And although it can be easy, it needed to be hosted and the free ones limit me.",
     },
   ],
-  certifications: {
-    freeCodeCamp: [
-      {
-        name: "Responsive Web Design",
-        url: "https://www.freecodecamp.org/certification/eugenefrancis_r/responsive-web-design",
-      },
-    ],
-  },
+  certifications: [
+    {
+      name: "Responsive Web Design",
+      url: "https://www.freecodecamp.org/certification/eugenefrancis_r/responsive-web-design",
+      source: "freeCodeCamp",
+    },
+  ],
+  educations: [
+    {
+      name: "AMA University",
+      url: "https://www.ama.edu.ph/",
+      description: "Bachelor of Science in Information Technology",
+      yearStart: 2013,
+      yearEnd: 2017,
+    },
+    {
+      name: "AMA University",
+      url: "https://www.ama.edu.ph/",
+      description: "Master of Science in Information Technology",
+      yearStart: 2019,
+      yearEnd: 2021,
+      finished: false,
+    },
+  ],
+  skills: [
+    {
+      name: "HTML",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/html-5.png",
+    },
+    {
+      name: "CSS",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/css3.png",
+    },
+    {
+      name: "JavaScript",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/javascript.png",
+    },
+    {
+      name: "TypeScript",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/typescript.png",
+    },
+    {
+      name: "React",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/officel/344/react.png",
+    },
+    {
+      name: "Node.js",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/nodejs.png",
+    },
+    {
+      name: "Express",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/express.png",
+    },
+    {
+      name: "MongoDB",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/mongodb.png",
+    },
+    {
+      name: "MySQL",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/mysql.png",
+    },
+    {
+      name: "Git",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/git.png",
+    },
+    {
+      name: "GitHub",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/48/000000/github.png",
+    },
+    {
+      name: "Heroku",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/heroku.png",
+    },
+    {
+      name: "Netlify",
+      level: SkillLevel.intermediate,
+      iconUrl:
+        "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/344/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png",
+    },
+    {
+      name: "Adobe Photoshop",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/adobe-photoshop.png",
+    },
+    {
+      name: "Python",
+      level: SkillLevel.beginner,
+      iconUrl: "https://img.icons8.com/color/48/000000/python.png",
+    },
+    {
+      name: "Blender",
+      level: SkillLevel.advanced,
+      iconUrl: "https://img.icons8.com/color/344/blender-3d.png",
+    },
+    {
+      name: "Unity",
+      level: SkillLevel.beginner,
+      iconUrl: "https://img.icons8.com/color/48/000000/unity.png",
+    },
+    {
+      name: "C#",
+      level: SkillLevel.beginner,
+      iconUrl: "https://img.icons8.com/color/48/000000/c-sharp-logo.png",
+    },
+    {
+      name: "Java",
+      level: SkillLevel.beginner,
+      iconUrl: "https://img.icons8.com/color/48/000000/java.png",
+    },
+    {
+      name: "Kubernetes",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/kubernetes.png",
+    },
+    {
+      name: "Docker",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/docker.png",
+    },
+    {
+      name: "AWS",
+      level: SkillLevel.beginner,
+      iconUrl: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
+    },
+    {
+      name: "Github Actions",
+      level: SkillLevel.beginner,
+      iconUrl: "https://avatars.githubusercontent.com/u/44036562?s=200&v=4",
+    },
+    {
+      name: "Vercel",
+      level: SkillLevel.beginner,
+      iconUrl: "https://www.svgrepo.com/show/354513/vercel-icon.svg",
+    },
+    {
+      name: "Jest",
+      level: SkillLevel.intermediate,
+      iconUrl:
+        "https://www.pngitem.com/pimgs/m/346-3463674_jest-logo-png-transparent-png.png",
+    },
+    {
+      name: "React Testing Library",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://testing-library.com/img/octopus-64x64.png",
+    },
+    {
+      name: "TailwindCSS",
+      level: SkillLevel.advanced,
+      iconUrl:
+        "https://static-00.iconduck.com/assets.00/tailwind-css-icon-512x307-1v56l8ed.png",
+    },
+    {
+      name: "Ant Design",
+      level: SkillLevel.advanced,
+      iconUrl:
+        "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+    },
+    {
+      name: "Figma",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/figma.png",
+    },
+    {
+      name: "Sass",
+      level: SkillLevel.intermediate,
+      iconUrl: "https://img.icons8.com/color/48/000000/sass.png",
+    },
+    {
+      name: "Vue",
+      level: SkillLevel.beginner,
+      iconUrl: "https://img.icons8.com/color/344/vue-js.png",
+    },
+    {
+      name: "Auth0",
+      level: SkillLevel.intermediate,
+      iconUrl:
+        "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/344/external-auth0-the-solution-you-need-for-web-mobile-iot-and-internal-applications-logo-shadow-tal-revivo.png",
+    },
+  ],
 };
 
 export default data;
