@@ -21,6 +21,7 @@ const handleFinish = (values: any) => {
     method: `POST`,
     headers: { "Content-Type": `application/x-www-form-urlencoded` },
     body: encode({
+      "form-name": "contact",
       ...values,
     }),
   })
@@ -35,10 +36,12 @@ const ContactForm: React.FC = () => {
     <Form
       form={form}
       data-netlify="true"
+      data-netlify-recaptcha="true"
       onFinish={handleFinish}
       layout="vertical"
       requiredMark="optional"
       size="large"
+      name="contact"
     >
       <Form.Item name="name" label="Name" rules={[{ required: true }]}>
         <Input />
@@ -49,6 +52,7 @@ const ContactForm: React.FC = () => {
       <Form.Item name="message" label="Message" rules={[{ required: true }]}>
         <Input.TextArea />
       </Form.Item>
+      <div data-netlify-recaptcha="true"></div>
       <Form.Item>
         <Button type="primary" htmlType="submit">
           Submit
