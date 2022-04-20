@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
     <Form
       form={form}
       data-netlify="true"
-      onFinish={handleFinish}
+      // onFinish={handleFinish}
       layout="vertical"
       requiredMark="optional"
       size="large"
