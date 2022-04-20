@@ -36,7 +36,6 @@ const ContactForm: React.FC = () => {
     <Form
       form={form}
       data-netlify="true"
-      data-netlify-recaptcha="true"
       onFinish={handleFinish}
       layout="vertical"
       requiredMark="optional"
@@ -52,7 +51,6 @@ const ContactForm: React.FC = () => {
       <Form.Item name="message" label="Message" rules={[{ required: true }]}>
         <Input.TextArea />
       </Form.Item>
-      <div data-netlify-recaptcha="true"></div>
       <Form.Item>
         <Button type="primary" htmlType="submit">
           Submit
