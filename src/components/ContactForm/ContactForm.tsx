@@ -39,6 +39,7 @@ const ContactForm: React.FC = () => {
       layout="vertical"
       requiredMark="optional"
       size="large"
+      name="contact"
     >
       <Form.Item name="name" label="Name" rules={[{ required: true }]}>
         <Input />
