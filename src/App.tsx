@@ -1,4 +1,4 @@
-import { Col, Layout, Row, Space } from "antd";
+import { Card, Col, Layout, Row, Space, Typography } from "antd";
 import "antd/dist/antd.css";
 import "./App.scss";
 import data from "./assets/data";
@@ -8,6 +8,7 @@ import { EducationList } from "./components/EducationList";
 import { Hero } from "./components/Hero";
 import { ProjectsList } from "./components/ProjectsList";
 import { SkillList } from "./components/SkillList";
+import { ContactForm } from "./components/ContactForm";
 
 function App() {
   return (
@@ -45,6 +46,14 @@ function App() {
               </Row>
               <Row>
                 <CertificationList certifications={data.certifications} />
+              </Row>
+              <Row>
+                <Col span={22} offset={1}>
+                  <Typography.Title level={2}>Contact</Typography.Title>
+                  <Card>
+                    <ContactForm />
+                  </Card>
+                </Col>
               </Row>
             </Space>
           </Col>
