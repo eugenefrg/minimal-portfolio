@@ -1,14 +1,9 @@
-import { Card, Col, Layout, Row, Space, Typography } from "antd";
+import { Col, Layout, Row } from "antd";
 import "antd/dist/antd.css";
 import "./App.scss";
 import data from "./assets/data";
 import CatWire from "./assets/images/siteDesign/catWire-pass-thru-40.svg";
-import { CertificationList } from "./components/CertificationList";
-import { EducationList } from "./components/EducationList";
 import { Hero } from "./components/Hero";
-import { ProjectsList } from "./components/ProjectsList";
-import { SkillList } from "./components/SkillList";
-import { ContactForm } from "./components/ContactForm";
 import { PageContent } from "./components/PageContent";
 
 function App() {
