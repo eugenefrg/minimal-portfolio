@@ -9,13 +9,18 @@ import { Hero } from "./components/Hero";
 import { ProjectsList } from "./components/ProjectsList";
 import { SkillList } from "./components/SkillList";
 import { ContactForm } from "./components/ContactForm";
+import { PageContent } from "./components/PageContent";
 
 function App() {
   return (
     <Layout style={{ height: "100%" }}>
       <Layout.Content>
         <Row style={{ height: "100%" }}>
-          <Col md={12} xs={24} style={{ height: "100%" }}>
+          <Col
+            md={12}
+            xs={24}
+            style={{ height: "100%", backgroundColor: "white" }}
+          >
             <Hero
               name={data.name}
               description={data.description}
@@ -24,38 +29,27 @@ function App() {
           </Col>
           <Col
             md={12}
-            xs={24}
+            xs={0}
             style={{
               height: "100vh",
               overflow: "auto",
+              backgroundColor: "white",
               backgroundImage: `url("${CatWire}")`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               paddingBottom: "2rem",
             }}
           >
-            <Space direction="vertical" size="large">
-              <Row>
-                <SkillList skills={data.skills} />
-              </Row>
-              <Row>
-                <CertificationList certifications={data.certifications} />
-              </Row>
-              <Row>
-                <ProjectsList projects={data.projects} />
-              </Row>
-              <Row>
-                <EducationList educations={data.educations} />
-              </Row>
-              <Row>
-                <Col span={22} offset={1}>
-                  <Typography.Title level={2}>Contact</Typography.Title>
-                  <Card>
-                    <ContactForm />
-                  </Card>
-                </Col>
-              </Row>
-            </Space>
+            <PageContent />
+          </Col>
+          <Col
+            md={0}
+            xs={24}
+            style={{
+              paddingBottom: "2rem",
+            }}
+          >
+            <PageContent />
           </Col>
         </Row>
       </Layout.Content>
