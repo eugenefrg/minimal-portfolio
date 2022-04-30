@@ -32,7 +32,7 @@ const SkillList: React.FC<SkillListProps> = ({ skills }) => {
             <Space wrap>
               {skillLevels[skillLevel].map((skill) => {
                 return (
-                  <Popover content={skill.name}>
+                  <Popover content={skill.name} trigger={["click", "hover"]}>
                     <img src={skill.iconUrl} alt={skill.name} height="48" />
                   </Popover>
                 );
