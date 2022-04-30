@@ -15,7 +15,7 @@ function App() {
     <Layout style={{ height: "100%" }}>
       <Layout.Content>
         <Row style={{ height: "100%" }}>
-          <Col span={12} style={{ height: "100%" }}>
+          <Col md={12} xs={24} style={{ height: "100%" }}>
             <Hero
               name={data.name}
               description={data.description}
@@ -23,7 +23,8 @@ function App() {
             />
           </Col>
           <Col
-            span={12}
+            md={12}
+            xs={24}
             style={{
               height: "100vh",
               overflow: "auto",
@@ -34,18 +35,17 @@ function App() {
             }}
           >
             <Space direction="vertical" size="large">
-              <Row style={{ height: "100vh" }} />
-              <Row>
-                <ProjectsList projects={data.projects} />
-              </Row>
-              <Row>
-                <EducationList educations={data.educations} />
-              </Row>
               <Row>
                 <SkillList skills={data.skills} />
               </Row>
               <Row>
                 <CertificationList certifications={data.certifications} />
+              </Row>
+              <Row>
+                <ProjectsList projects={data.projects} />
+              </Row>
+              <Row>
+                <EducationList educations={data.educations} />
               </Row>
               <Row>
                 <Col span={22} offset={1}>

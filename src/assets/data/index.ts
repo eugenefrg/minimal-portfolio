@@ -9,8 +9,8 @@ import wpWebsiteAttempt from "../images/projects/wpWebsiteAttempt.png";
  */
 const data: Person = {
   name: "Eugene Francis R.",
-  description:
-    "A Full Stack Developer / Software Engineer and Enigmatologist.\nI break complex obstacles to simple and less daunting forms and figure it out from there.",
+  description: `Indeed, the ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code as part of the effort to write new code. Therefore making it easy to read makes it easier to write.
+    ― Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship `,
   links: [
     { name: "github", url: "https://github.com/eugenefrg" },
     {
@@ -50,6 +50,11 @@ const data: Person = {
       name: "Responsive Web Design",
       url: "https://www.freecodecamp.org/certification/eugenefrancis_r/responsive-web-design",
       source: "freeCodeCamp",
+    },
+    {
+      name: "Programming Foundations: Fundamentals by Annyce Davis",
+      url: "https://www.linkedin.com/learning/certificates/48de8e94a929c320a5753ac73af4cfaa17ae004cbec9d7cc3f910c7ee609287d?trk=share_certificate",
+      source: "LinkedIn",
     },
   ],
   educations: [
@@ -234,6 +239,12 @@ const data: Person = {
       level: SkillLevel.intermediate,
       iconUrl:
         "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/344/external-auth0-the-solution-you-need-for-web-mobile-iot-and-internal-applications-logo-shadow-tal-revivo.png",
+    },
+    {
+      name: "Microsoft SQL Server",
+      level: SkillLevel.intermediate,
+      iconUrl:
+        "https://img.icons8.com/color/48/000000/microsoft-sql-server.png",
     },
   ],
 };

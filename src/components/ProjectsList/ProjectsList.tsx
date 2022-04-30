@@ -12,7 +12,7 @@ interface ProjectsProps {
 const ProjectsList: React.FC<ProjectsProps> = ({ projects }) => {
   return (
     <Col span={22} offset={1}>
-      <Typography.Title level={2}>ProjectsList</Typography.Title>
+      <Typography.Title level={2}>Projects</Typography.Title>
       <Space direction="vertical">
         {projects.map((project) => {
           return (
