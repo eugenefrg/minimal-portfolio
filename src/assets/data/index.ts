@@ -1,6 +1,7 @@
 import { Person, SkillLevel } from "./types";
 import sunsetHillsGif from "../images/projects/sunsetHills.gif";
 import wpWebsiteAttempt from "../images/projects/wpWebsiteAttempt.png";
+import CoinverterPng from "../images/projects/coinverter.png";
 
 /**
  * An object that contains all the data for the website.
@@ -21,6 +22,13 @@ const data: Person = {
     { name: "twitter", url: "https://twitter.com/eugenefrancis_r" },
   ],
   projects: [
+    {
+      name: "Coinverter",
+      imageUrl: CoinverterPng,
+      demoUrl: "https://coinverter-red.vercel.app/",
+      repoUrl: "https://github.com/eugenefrg/coinverter",
+      description: `A web application that converts currencies. This is a project that I undertook to learn Next.js, web3.js, and material-ui. You can also connect your wallet and see the balance of your cryptocurrencies.`,
+    },
     {
       name: "FreeCodeCamp Responsive Web Design",
       imageUrl:
@@ -245,6 +253,18 @@ const data: Person = {
       level: SkillLevel.intermediate,
       iconUrl:
         "https://img.icons8.com/color/48/000000/microsoft-sql-server.png",
+    },
+    {
+      name: "Web3.js",
+      level: SkillLevel.beginner,
+      iconUrl:
+        "https://compile.blog/wp-content/uploads/2021/11/Web3-Icon-3-150x150.png",
+    },
+    {
+      name: "Next.js",
+      level: SkillLevel.beginner,
+      iconUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/207px-Nextjs-logo.svg.png",
     },
   ],
 };

@@ -35,6 +35,17 @@ const ProjectsList: React.FC<ProjectsProps> = ({ projects }) => {
                       {project.demoUrl}
                     </a>
                   </Typography.Paragraph>
+                  {project.repoUrl && (
+                    <Typography.Paragraph>
+                      <a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Code
+                      </a>
+                    </Typography.Paragraph>
+                  )}
                 </Col>
               </Row>
             </Card>
