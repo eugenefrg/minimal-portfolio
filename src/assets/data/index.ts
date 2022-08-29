@@ -2,6 +2,8 @@ import { Person, SkillLevel } from "./types";
 import sunsetHillsGif from "../images/projects/sunsetHills.gif";
 import wpWebsiteAttempt from "../images/projects/wpWebsiteAttempt.png";
 import CoinverterPng from "../images/projects/coinverter.png";
+import WeatherApp from "../images/projects/weatherApp.png";
+import DevBlog from "../images/projects/devblog.png";
 
 /**
  * An object that contains all the data for the website.
@@ -22,6 +24,20 @@ const data: Person = {
     { name: "twitter", url: "https://twitter.com/eugenefrancis_r" },
   ],
   projects: [
+    {
+      name: "Weather App - WIP",
+      imageUrl: WeatherApp,
+      demoUrl: "https://eugene999-weatherapp.netlify.app/",
+      repoUrl: "https://github.com/eugenefrg/weatherapp",
+      description: `An ongoing project where I attempt to create a Weather App. The website may or may not work just yet as I still have to manage the API calls. This is a project made to learn more about Hooks, practicing the way I organize scripts and documentation and the features that I may need to prioritise. The project was set to be done in three days as a test, but I did find that I can learn more from this project if I continue with this.`,
+    },
+    {
+      name: "Dev Blog - WIP",
+      imageUrl: DevBlog,
+      demoUrl: "https://efrdev.gtsb.io/",
+      repoUrl: "https://github.com/eugenefrg/dev-blog",
+      description: `Gatsby seemed to be a nice library to try out, and I think it works well for my purposes. This contains or will contain some ramblings or the experiences I have gone through just so I have a tangible list of where have I gone through to keep myself grounded and in the correct perspective.`,
+    },
     {
       name: "Coinverter",
       imageUrl: CoinverterPng,
